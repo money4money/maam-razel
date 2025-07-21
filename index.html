@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ma'am Razel</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...snipped..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header class="header">
-    <h1>Ma'am Razel</h1>
+    <h1>Room 8 Chronicles</h1>
     <div class="header-actions">
       <button id="toggleMode">🌓</button>
       <button class="menu-toggle" id="menuToggle">☰</button>
@@ -28,9 +29,34 @@
 
   <main>
     <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>Welcome to my teaching page. I'm Ma'am Razel, a curious and committed educator on a journey to inspire learning.</p>
+  <h2>About Me</h2>
+  <p>
+    Hello! I'm Ma'am Razel, a passionate Social Studies teacher at San Miguel National High School in Leyte. For the past 7 years, I’ve been teaching Grade 8 Araling Panlipunan, helping students explore Philippine history, government, economics, and our country’s role in the world.
+  </p>
+  <p>
+    I believe that Social Studies is not just about memorizing dates and facts — it’s about understanding who we are, where we came from, and how we can shape a better future. I strive to make my classes engaging, relevant, and full of heart.
+  </p>
+  <p>
+    I love creating a classroom environment where students feel heard, respected, and inspired to learn. Teaching isn’t just my job — it’s my vocation.
+  </p>
+</section>
+
+    <section id="quote">
+  <blockquote>
+    “A good teacher can inspire hope, ignite the imagination, and instill a love of learning.”
+  </blockquote>
     </section>
+    <section id="timeline">
+  <h2>My Teaching Timeline</h2>
+  <ul>
+    <li><strong>2018</strong> – Started teaching at SMNHS</li>
+    <li><strong>2019</strong> – Mentored 3 student achievers</li>
+    <li><strong>2020</strong> – Shifted to remote learning during pandemic</li>
+    <li><strong>2024</strong> – Started classroom teacher adviser</li>
+    <li><strong>2025</strong> – Classroom Projects</li>
+  </ul>
+    </section>
+    
 
     <section id="schedule" class="section">
       <h2>My Schedule SY 2025-2026</h2>
@@ -90,5 +116,17 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  let words = ["Dedicated Teacher", "Grade 8 Adviser", "Lifelong Learner"];
+  let i = 0, j = 0, current = "";
+  setInterval(() => {
+    current = words[i].substring(0, j++);
+    document.getElementById("typed-text").textContent = current;
+    if (j > words[i].length) {
+      j = 0;
+      i = (i + 1) % words.length;
+    }
+  }, 200);
+    </script>
 </body>
 </html>
